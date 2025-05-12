@@ -75,7 +75,7 @@ export default function CreativeCalendar() {
     const month = currentDate.getMonth();
     const daysInMonth = getDaysInMonth(year, month);
     const firstDayOfMonth = getFirstDayOfMonth(year, month);
-    const days: JSX.Element[] = [];
+    const days = [];
 
     for (let i = 0; i < firstDayOfMonth; i++) {
       days.push(<div key={`empty-${i}`} className="h-12 md:h-16"></div>);

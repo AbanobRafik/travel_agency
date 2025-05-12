@@ -6,7 +6,6 @@ const EditProfile = () => {
   const [email, setEmail] = useState("john@travel.com");
   const [notifications, setNotifications] = useState(true);
   const [password, setPassword] = useState("");
-  const [balance, setBalance] = useState(1200);
 
   const handlePhotoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -17,7 +16,7 @@ const EditProfile = () => {
 
   const handleSave = () => {
     alert("Profile updated!");
-    console.log({ photo, name, email, notifications, password, balance });
+    console.log({ photo, name, email, notifications, password });
   };
 
   return (
@@ -99,7 +98,6 @@ const EditProfile = () => {
           </label>
           <input
             type="number"
-            value={balance}
             readOnly
             className="mt-1 block w-full border border-rose-300 px-3 py-2 rounded-lg bg-gray-100 text-rose-700"
           />
